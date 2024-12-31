@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+        /* Basic styling for login form */
+        
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .role-select {
+            display: none;
+            margin-top: 10px;
+        }
+        
+        .login-btn:hover .role-select {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required /><br /><br />
+            <input type="password" name="password" placeholder="Password" required /><br /><br />
+
+            <div class="login-btn">
+                <button type="submit">Login</button>
+                <div class="role-select">
+                    <label>
+                <input type="radio" name="role" value="admin" required /> Admin
+              </label>
+                    <label>
+                <input type="radio" name="role" value="member" required />
+                Member
+              </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+</html>

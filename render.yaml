@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: demo
+    env: java
+    plan: free
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/demo-0.0.1-SNAPSHOT.jar"
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://dpg-ctpq8jbqf0us73ee5uug-a.oregon-postgres.render.com:5432/clubmanage
+      - key: SPRING_DATASOURCE_USERNAME
+        value: clubmanage_user
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: GNDG9RDtyILZ84YG7sxCrR8weS8OHdyM
